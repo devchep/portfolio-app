@@ -1,4 +1,4 @@
-import {BoxGeometry, MeshBasicMaterial, Mesh, Scene, PerspectiveCamera} from "three";
+import {BoxGeometry, Mesh, Scene, PerspectiveCamera, MeshPhongMaterial} from "three";
 
 interface CubeArgs {
     scene: Scene;
@@ -11,11 +11,10 @@ class Cube {
     constructor(args: CubeArgs) {
         const { scene, camera } = args;
         const geometry = new BoxGeometry();
-        const material = new MeshBasicMaterial( { color: 0xff00ff } );
+        const material = new MeshPhongMaterial( { color: 0xff00ff } );
         const cubeMesh = this.cubeMesh = new Mesh( geometry, material );
 
         scene.add( cubeMesh );
-        camera.position.z = 5;
     }
 
     rotateCube() {

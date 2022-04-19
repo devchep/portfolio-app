@@ -1,23 +1,12 @@
-import React, { useEffect, useRef } from 'react';
-import ThreeCanvas from '../classes/ThreeCanvas';
+import React from 'react';
 
 function Main() {
-  const canvasRef = useRef(document.createElement("div"))
-
-  useEffect(() => {
-    new ThreeCanvas({
-      mountElement: canvasRef.current, 
-      width: window.innerWidth,
-      height: window.innerHeight
-    });
-
-  }, []);
-
-
   return (
-    <div className="App">
-      <div ref={canvasRef} />
-    </div>
+    <section className="main">
+        <p style={{position: 'fixed', left: 600, top: 100, fontSize: 22, color: "#fff"}}>
+            devchep Portfolio
+        </p>
+    </section>
   );
 }
 

@@ -1,9 +1,13 @@
 import React from 'react';
 import Main from './components/Main';
+import ThreeBackground from './components/ThreeBackground';
 
 function App() {
   return (
-    <Main/>
+    <>
+      <Main/>
+      <ThreeBackground/>
+    </>
 )
 }
 
